@@ -63,6 +63,7 @@ int main()
 					}
 				}
 				mainBoard->PutRandomNumbers();
+				system("cls");
 				PrintGameframe(mainBoard, undo);
 			}
 			mainBoard->ResetBoxesChangedStatus();
@@ -74,6 +75,7 @@ int main()
 		}
 		if (keyPressed == 85 || keyPressed == 117)
 		{
+			system("cls");
 			if (undo == 0)
 				std::cout << "Can't undo... there are no undos left!\n";
 			else if (mainBoard->GetPrev() == NULL)
@@ -103,7 +105,6 @@ int main()
 
 void PrintGameframe(GameBoard* mainBoard, int undo)
 {
-	system("cls");
 	std::cout << "2048\n-------------------------\n";
 	mainBoard->PrintBoard();
 	std::cout << "-------------------------\nUndos Left: " << std::to_string(undo) << "\n";
