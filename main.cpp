@@ -41,7 +41,10 @@ int main()
 					break;
 			}
 			if (*mainBoard == *temp)
+			{
 				delete temp;
+				temp = NULL;
+			}
 			else
 			{
 				mainBoard->SetPrev(temp);
@@ -58,6 +61,7 @@ int main()
 						GameBoard* temp = cursor->GetPrev();
 						cursor->SetPrev(NULL);
 						delete temp;
+						temp = NULL;
 						i = 0;
 						cursor = mainBoard;
 					}
@@ -85,6 +89,7 @@ int main()
 				GameBoard* temp = mainBoard;
 				mainBoard = mainBoard->GetPrev();
 				delete temp;
+				temp = NULL;
 				undo--;
 			}
 			PrintGameframe(mainBoard, undo);
@@ -98,7 +103,9 @@ int main()
 		delete mainBoard;
 		mainBoard = temp;
 	}
+	temp = NULL;
 	delete mainBoard;
+	mainBoard = NULL;
 	
 	system("pause");
 }

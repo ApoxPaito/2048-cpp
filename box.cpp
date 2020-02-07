@@ -8,7 +8,7 @@ Box::Box()
 
 Box::~Box()
 {
-	
+
 }
 
 int Box::GetValue() const

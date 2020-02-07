@@ -13,7 +13,7 @@ GameBoard::GameBoard(GameBoard* gameboard)
 
 GameBoard::~GameBoard()
 {
-	
+
 }
 
 void GameBoard::PushUp()

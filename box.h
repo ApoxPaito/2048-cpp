@@ -1,5 +1,5 @@
 #ifndef BOX_H
-#define BOX_X
+#define BOX_H
 
 class Box
 {
